@@ -1,0 +1,20 @@
+{
+  "users": {
+    "name": [
+      "users"
+    ],
+    "columns": [],
+    "rows": [
+      {
+        "id": 1,
+        "name": "Sara2",
+        "email": "sara2@example.com"
+      },
+      {
+        "id": 2,
+        "name": "Sara",
+        "email": "sara@example.com"
+      }
+    ]
+  }
+}
