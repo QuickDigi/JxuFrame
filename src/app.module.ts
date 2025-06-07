@@ -1,13 +1,14 @@
 import "reflect-metadata";
-import { JxuFrame } from "./core/framework";
+import { JxuFrame } from "_@core/framework";
 import { AppController } from "./Controller/app.controller";
+import { DotEnv } from "_@/_e/dotenv";
+DotEnv();
 
 const app = new JxuFrame();
+const PORT: any = process.env.SERVER_PORT || 3000;
 
-// تسجيل الكنترولر
 app.registerController(AppController);
 
-// تشغيل السيرفر على المنفذ 3000
-app.listen(3000, () => {
-    console.log(`🚀 Server running on http://localhost:3000`);
+app.StartServer(PORT, () => {
+    console.log(`${process.env.SERVER_START_MESSAGE} http://localhost:${PORT}`);
 });

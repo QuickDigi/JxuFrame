@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "ts-node src/app.module.ts",
-    "live": "nodemon --exec ts-node src/app.module.ts",
+    "live": "nodemon --exec ts-node -r tsconfig-paths/register src/app.module.ts",
     "build": "tsc"
   },
   "devDependencies": {
@@ -10,6 +10,7 @@
     "@types/hpp": "^0.2.6",
     "@types/node": "^22.15.29",
     "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.8.3"
   },
   "dependencies": {
